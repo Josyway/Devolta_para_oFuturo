@@ -1,0 +1,73 @@
+@use 'variaveis';
+
+.hero {
+    padding: 1.6vw;
+    min-height: 80vh;
+    background-image: url(../images/Hero1.png);
+    text-align: center;
+    background-size: cover;
+
+    @media (max-width: 768px) {
+        background-image: url(../images/Hero.png);
+        padding-top: calc(50vw + 25px);
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-top: -55px;
+    }
+
+    .button {
+        margin-top: 2vw;
+        margin-bottom: 38px;
+        
+        a{
+            text-decoration: none;
+            color: variaveis.$corTextoSecundario;
+        }
+    }
+
+    &__content{
+        max-width: 380px;
+
+        &__branding{
+            max-width: 280px;
+            margin: 38px auto;
+            justify-content: auto;
+
+            img {
+                max-width: 280px;
+            }
+
+            @media (max-width: 768px) {
+                max-width: 280px;
+            }
+
+        }
+
+        .title--small{
+            margin-bottom: 64px;
+        }
+
+        &__combos{
+            display: flex;
+            justify-content: space-between;
+
+            @media (max-width: 768px) {
+                display: block;
+            }
+
+            &__combo{
+                width: calc(50% - 12px);
+
+                @media (max-width: 768px) {
+                    width: 100%;
+                    margin-bottom: 24px;
+                }
+
+                img {
+                    max-height: 40px;
+                }
+
+            }
+        }
+    }
+}
